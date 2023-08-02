@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class EntradaModel {
-    private String id;
+    private String fecha;
     private Integer recibo;
+    private Integer monto;
 }

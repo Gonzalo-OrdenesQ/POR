@@ -19,6 +19,7 @@ public class EntradaEntity {
     @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Date fecha;
+    private String fecha;
     private Integer recibo;
+    private Integer monto;
 }

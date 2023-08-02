@@ -24,14 +24,8 @@ public class SalidaService {
         return nuevaSalida;
     }
 
-    public List<SalidaEntity> getByDates(Date inicio, Date fin){
-        String patron = "yyyy-MM-dd";
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(patron);
-
-        String strInicio = simpleDateFormat.format(inicio);
-        String strFin = simpleDateFormat.format(fin);
-
-        List<SalidaEntity> salidas = salidaRepository.findByDates(strInicio, strFin);
+    public List<SalidaEntity> getByDates(String inicio, String fin){
+        List<SalidaEntity> salidas = salidaRepository.findByDates(inicio, fin);
         return salidas;
     }
 }

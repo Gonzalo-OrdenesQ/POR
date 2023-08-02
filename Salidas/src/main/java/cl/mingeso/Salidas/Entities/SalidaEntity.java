@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "entradas")
+@Table(name = "salidas")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,7 +19,7 @@ public class SalidaEntity {
     @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Date fecha;
+    private String fecha;
     private String tipo;
     private Integer numero;
     private String motivo;

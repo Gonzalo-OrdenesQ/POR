@@ -12,7 +12,7 @@
 	<artifactId>gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>gateway</name>
-	<description>Servicio de gateway para sistema de aprendizaje de lenguaje Python</description>
+	<description>Servicio de gateway para sistema de gestion de entrada y salida de dineros de una caja chica</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.5</spring-cloud.version>

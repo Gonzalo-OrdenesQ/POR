@@ -8,14 +8,13 @@ spring:
     config:
       enabled: true
       uri: http://localhost:8081
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/salidas?autorReconnect=true&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: admin
   jpa:
     show-sql: true
     hibernate:
       dialect: MySQL8Dialect
       ddl-auto: create
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    dbname: salidas
-    url: jdbc:mysql://localhost:3306/salidas?autorReconnect=true&allowPublicKeyRetrieval=true&useSSL=false
-    username: root
-    password: admin

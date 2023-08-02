@@ -32,8 +32,8 @@ public class SalidaController {
         return ResponseEntity.ok(nuevaSalida);
     }
 
-    @GetMapping("/dates")
-    public ResponseEntity<List<SalidaEntity>> getByDate(@RequestParam Date inicio, @RequestParam Date fin){
+    @GetMapping("/dates/{fecha_inicio}/{fecha_fin}")
+    public ResponseEntity<List<SalidaEntity>> getByDate(@PathVariable("fecha_inicio") String inicio, @PathVariable("fecha_fin") String fin){
         List<SalidaEntity> salidas = salidaService.getByDates(inicio, fin);
         if (salidas.isEmpty())
             return ResponseEntity.noContent().build();

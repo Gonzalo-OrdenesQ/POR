@@ -28,7 +28,15 @@ spring:
             allowed-headers: "*"
             allow-credentials: true
       routes:
-        - id: 
-          uri: 
+        - id: entradas
+          uri: lb://entradas
           predicates:
-            - 
+            - Path: /entradas/**
+        - id: salidas
+          uri: lb://salidas
+          predicates:
+            - Path: /salidas/**
+        - id: resumenes
+          uri: lb://resumenes
+          predicates:
+            - Path: /resumenes/**

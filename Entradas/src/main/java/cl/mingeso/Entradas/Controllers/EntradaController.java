@@ -32,9 +32,9 @@ public class EntradaController {
         return ResponseEntity.ok(nuevaEntrada);
     }
 
-    @GetMapping("/dates")
-    public ResponseEntity<List<EntradaEntity>> getByDate(@RequestParam Date inicio, @RequestParam Date fin){
-        List<EntradaEntity> entradas = entradaService.getByDates(inicio, fin);
+    @GetMapping("/dates/{fecha_inicio}/{fecha_fin}")
+    public ResponseEntity<List<EntradaEntity>> getByDate(@PathVariable("fecha_inicio") String inicio, @PathVariable("fecha_fin") String fin){
+        List<EntradaEntity> entradas = entradaService.getByDates(inicio,fin);
         if (entradas.isEmpty())
             return ResponseEntity.noContent().build();
         return ResponseEntity.ok(entradas);

@@ -12,6 +12,6 @@ import java.util.List;
 @Repository
 public interface SalidaRepository extends JpaRepository<SalidaEntity, Integer> {
 
-    @Query(value = "SELECT * FROM SalidaEntity s WHERE (DATE(s.date) BETWEEN :inicio AND :fin ORDER BY DATE(s.date) ASC", nativeQuery = true)
+    @Query(value = "SELECT * FROM salidas s WHERE (DATE(s.fecha) BETWEEN :inicio AND :fin) ORDER BY DATE(s.fecha) ASC", nativeQuery = true)
     List<SalidaEntity> findByDates(@Param("inicio") String inicio, @Param("fin") String fin);
 }
