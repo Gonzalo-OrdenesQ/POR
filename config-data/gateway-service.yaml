@@ -31,12 +31,12 @@ spring:
         - id: entradas
           uri: lb://entradas
           predicates:
-            - Path: /entradas/**
+            - Path=/entradas/**
         - id: salidas
           uri: lb://salidas
           predicates:
-            - Path: /salidas/**
+            - Path=/salidas/**
         - id: resumenes
           uri: lb://resumenes
           predicates:
-            - Path: /resumenes/**
+            - Path=/resumenes/**
